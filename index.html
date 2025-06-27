@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presentes do Amigo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Presentes de casamento para Daniel e Raysa</h1>
+        <p>Olá! Escolha um presente para nosso amigo. Por favor, preencha seus dados abaixo para que possamos agradecer!</p>
+        <p class="info">Os presentes marcados por alguém aparecerão como indisponíveis e riscados para todos em tempo real.</p>
+
+        <form id="presentForm">
+            <div class="form-group">
+                <label for="nome">Seu Nome Completo:</label>
+                <input type="text" id="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Seu Telefone (com DDD):</label>
+                <input type="tel" id="telefone" pattern="[0-9]{10,11}" placeholder="Ex: 44998765432" required>
+                <small>Formato: Apenas números (10 ou 11 dígitos).</small>
+            </div>
+
+            <h2>Opções de Presente:</h2>
+            <div id="presentList">
+                <!-- Presentes serão carregados aqui pelo JavaScript -->
+                <p>Carregando presentes...</p>
+            </div>
+
+            <button type="submit">Confirmar Escolha</button>
+        </form>
+
+        <div id="confirmationMessage" class="hidden">
+            <h2>Obrigado!</h2>
+            <p id="confirmedPresentText"></p>
+            <p>Sua escolha foi registrada e atualizada para todos! :)</p>
+        </div>
+    </div>
+
+    <!-- Seu script personalizado (agora com as importações e inicialização do Firebase dentro dele) -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
