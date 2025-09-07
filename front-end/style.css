@@ -122,3 +122,52 @@ button:hover {
     color: #155724;
     text-align: center;
 }
+
+/* --- ESTILOS PARA AS ABAS DE PRESENTES --- */
+
+/* Container dos botões de navegação */
+.tab-nav {
+    display: flex;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+/* Estilo de cada botão da aba */
+.tab-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    border-bottom: 3px solid transparent; /* Borda "invisível" para transição suave */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Estilo do botão ao passar o mouse */
+.tab-button:hover {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Estilo do botão ATIVO (a aba que está selecionada) */
+.tab-button.active {
+    color: #007bff; /* Cor do texto do botão ativo */
+    border-bottom: 3px solid #007bff; /* Borda inferior que indica a aba ativa */
+}
+
+/* Container do conteúdo das abas */
+.tab-content {
+    padding-top: 10px;
+}
+
+/* Por padrão, esconde todas as abas de conteúdo */
+.tab-pane {
+    display: none;
+}
+
+/* Mostra apenas a aba de conteúdo que estiver ATIVA */
+.tab-pane.active {
+    display: block;
+}
